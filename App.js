@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Text, View } from 'react-native';
 import * as Font from 'expo-font';
-import Home from './screens/home';
+import Navigator from './routes/homeStack';
 
 function useFonts(fontMap) {
   const [fontsLoaded, setFontsLoaded] = useState(false);
@@ -21,5 +21,5 @@ export default function App() {
   if (!fontsLoaded) {
     return <View><Text>App loading</Text></View>;
   }
-  return <Home />;
+  return <Navigator />;
 }

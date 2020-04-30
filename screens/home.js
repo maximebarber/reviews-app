@@ -1,10 +1,10 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import global from '../styles/global';
+import globalStyles from '../styles/global';
 
 const Home = () => (
-  <View style={global.container}>
-    <Text style={global.titleText}>Home screen test</Text>
+  <View style={globalStyles.container}>
+    <Text style={globalStyles.titleText}>Home screen</Text>
   </View>
 );
 
