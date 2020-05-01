@@ -2,7 +2,11 @@
 import React, { useState } from 'react';
 import { Text, View } from 'react-native';
 import * as Font from 'expo-font';
-import Navigator from './routes/homeStack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Home from './screens/home';
+import ReviewDetails from './screens/reviewDetails';
+// import Navigator from './routes/homeStack';
 
 function useFonts(fontMap) {
   const [fontsLoaded, setFontsLoaded] = useState(false);
@@ -13,6 +17,8 @@ function useFonts(fontMap) {
   return [fontsLoaded];
 }
 
+const Stack = createStackNavigator();
+
 export default function App() {
   const [fontsLoaded] = useFonts({
     'Victor-Mono': require('./assets/fonts/VictorMono-Italic.ttf'),
@@ -21,5 +27,12 @@ export default function App() {
   if (!fontsLoaded) {
     return <View><Text>App loading</Text></View>;
   }
-  return <Navigator />;
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={Home} options={{ title: 'Reviews' }} />
+        <Stack.Screen name="ReviewDetails" component={ReviewDetails} options={{ title: 'Details' }} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
