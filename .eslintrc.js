@@ -25,5 +25,6 @@ module.exports = {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "no-console": "off",
     "react/prop-types": ["error", { "ignore": ["navigation", "route"] }],
+    "no-use-before-define": ["error", { "variables": false }]
   }
 };

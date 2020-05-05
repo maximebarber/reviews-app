@@ -1,8 +1,9 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import About from '../screens/about';
+import Header from '../shared/header';
 
-const aboutStack = () => {
+const aboutStack = ({ navigation }) => {
   const Stack = createStackNavigator();
   return (
     <Stack.Navigator
@@ -11,17 +12,14 @@ const aboutStack = () => {
         headerStyle: {
           backgroundColor: '#4caf50',
         },
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-          fontWeight: 'bold',
-        },
+        headerTitleAlign: 'center',
       }}
     >
       <Stack.Screen
         name="About"
         component={About}
         options={{
-          title: 'About',
+          headerTitle: () => <Header navigation={navigation} title="About" />,
         }}
       />
     </Stack.Navigator>
