@@ -13,6 +13,10 @@ const homeStack = ({ navigation }) => {
         headerStyle: {
           backgroundColor: '#4caf50',
         },
+        headerTitleStyle: {
+          fontFamily: 'VictorMono-SemiBoldItalic',
+        },
+        headerTintColor: '#fff',
         headerTitleAlign: 'center',
       }}
     >

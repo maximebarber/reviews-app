@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {
   Text, View, FlatList, TouchableOpacity,
 } from 'react-native';
-import globalStyles from '../styles/global';
+import { globalStyles } from '../styles/global';
 import Card from '../shared/card';
 
 const Home = ({ navigation }) => {

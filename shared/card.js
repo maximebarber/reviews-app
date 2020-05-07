@@ -2,16 +2,13 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-const Card = ({ children }) => {
-  console.log(children);
-  return (
-    <View style={styles.card}>
-      <View style={styles.cardContent}>
-        { children }
-      </View>
+const Card = ({ children }) => (
+  <View style={styles.card}>
+    <View style={styles.cardContent}>
+      { children }
     </View>
-  );
-};
+  </View>
+);
 
 Card.propTypes = {
   children: PropTypes.node.isRequired,
