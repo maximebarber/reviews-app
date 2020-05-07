@@ -7,7 +7,7 @@ const globalStyles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   titleText: {
-    fontFamily: 'Victor-Mono',
+    fontFamily: 'VictorMono-SemiBold',
     fontSize: 18,
     color: '#333',
   },

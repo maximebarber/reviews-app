@@ -1,15 +1,21 @@
 import React from 'react';
 import { Text, View } from 'react-native';
+import Card from '../shared/card';
 import globalStyles from '../styles/global';
 
-const ReviewDetails = ({ route, navigation }) => {
+const ReviewDetails = ({ route }) => {
   const { title, rating, body } = route.params;
   return (
     <View style={globalStyles.container}>
-      <Text style={globalStyles.titleText}>Review details screen</Text>
-      <Text>{title}</Text>
-      <Text>{rating}</Text>
-      <Text>{body}</Text>
+      <Card>
+        <Text style={globalStyles.titleText}>{title}</Text>
+        <Text style={globalStyles.titleText}>{body}</Text>
+        <Text style={globalStyles.titleText}>
+          Rating:
+          {' '}
+          {rating}
+        </Text>
+      </Card>
     </View>
   );
 };

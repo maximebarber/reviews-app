@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   headerText: {
-    fontFamily: 'Victor-Mono-Bold',
+    fontFamily: 'VictorMono-SemiBoldItalic',
     fontSize: 20,
     color: '#fff',
     letterSpacing: 1,

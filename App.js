@@ -6,8 +6,10 @@ import DrawerNavigator from './navigation/drawerNavigation';
 
 
 const getFonts = () => Font.loadAsync({
-  'Victor-Mono': require('./assets/fonts/VictorMono-Italic.ttf'),
-  'Victor-Mono-Bold': require('./assets/fonts/VictorMono-BoldItalic.ttf'),
+  'VictorMono-Italic': require('./assets/fonts/VictorMono-Italic.ttf'),
+  'VictorMono-SemiBoldItalic': require('./assets/fonts/VictorMono-SemiBoldItalic.ttf'),
+  'VictorMono-Regular': require('./assets/fonts/VictorMono-Regular.ttf'),
+  'VictorMono-SemiBold': require('./assets/fonts/VictorMono-SemiBold.ttf'),
 });
 
 
