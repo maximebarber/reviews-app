@@ -5,12 +5,13 @@ import {
 import { Formik, Form } from 'formik';
 import { globalStyles, green } from '../styles/global';
 
-const ReviewForm = () => (
+const ReviewForm = ({ addReview }) => (
   <View style={globalStyles.container}>
     <Formik
       initialValues={{ title: '', body: '', rating: '' }}
-      onSubmit={(values) => {
-        console.log(values);
+      onSubmit={(values, actions) => {
+        actions.resetForm();
+        addReview(values);
       }}
     >
       {(formikProps) => (
