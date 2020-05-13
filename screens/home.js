@@ -5,6 +5,7 @@ import {
 import { MaterialIcons } from '@expo/vector-icons';
 import { globalStyles } from '../styles/global';
 import Card from '../shared/card';
+import ReviewDetails from './reviewForm';
 
 const Home = ({ navigation }) => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -25,7 +26,7 @@ const Home = ({ navigation }) => {
       <Modal animationType="slide" visible={modalOpen}>
         <View style={styles.modalContent}>
           <MaterialIcons name="close" size={24} onPress={() => setModalOpen(false)} style={{ ...styles.modalToggle, ...styles.modalClose }} />
-          <Text>Hello from the modal</Text>
+          <ReviewDetails />
         </View>
       </Modal>
 
