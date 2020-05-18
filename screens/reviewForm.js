@@ -2,8 +2,9 @@ import React from 'react';
 import {
   View, Button, TextInput,
 } from 'react-native';
-import { Formik, Form } from 'formik';
+import { Formik } from 'formik';
 import * as yup from 'yup';
+import FlatButton from '../shared/flatButton';
 import { globalStyles, green } from '../styles/global';
 
 const reviewSchema = yup.object().shape({
@@ -53,7 +54,7 @@ const ReviewForm = ({ addReview }) => (
             onChangeText={formikProps.handleChange('rating')}
             value={formikProps.values.rating}
           />
-          <Button title="Submit" color={green} onPress={() => formikProps.handleSubmit()} />
+          <FlatButton text="Add" onPress={() => formikProps.handleSubmit()} />
         </View>
       )}
     </Formik>
